@@ -54,7 +54,7 @@ SHELL = /bin/zsh
 CONDA_ACTIVATE = source $$(conda info --base)/etc/profile.d/conda.sh ; conda activate ; conda activate
 
 
-conda-pip:
+setup:
 	@# Help: Create/update conda env and install the exact pip packages into it
 ifeq (True,$(HAS_CONDA))
 	@echo ">>> Detected conda, creating/updating conda environment."
