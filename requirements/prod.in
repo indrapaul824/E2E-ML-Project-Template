@@ -1,0 +1,5 @@
+# Production packages only
+fastapi
+uvicorn
+streamlit
+typer
