@@ -18,7 +18,7 @@ A generic End-to-End Machine Learning project structure template which can be us
     │   └── prod.in
     ├── setup.py
     ├── src
-    │   └── __init__.py
+        └── __init__.py
     ```
 
 2. Open the terminal and navigate to the project folder and call the make command that you defined in the Makefile:
