@@ -60,8 +60,8 @@ ifeq (True,$(HAS_CONDA))
 	@echo ">>> Detected conda, creating/updating conda environment."
 	conda env update -p $(PROJECT_DIR)/venv --prune -f environment.yml
 	$(CONDA_ACTIVATE) venv/
-	pip-compile requirements/dev.in && pip-compile requirements/prod.in
-	pip-sync requirements/dev.txt && pip-sync requirements/prod.txt
+	pip-compile -o requirements.txt setup.py
+	pip-sync requirements.txt
 else
 	@echo ">>> conda not detected, please use a shell configured with conda. Use "Anaconda Prompt" for Windows. Please download and install Anaconda if you don't already have it. Exiting..."
 endif
